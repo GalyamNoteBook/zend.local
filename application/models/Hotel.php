@@ -3,10 +3,13 @@
 class Application_Model_Hotel
 {
     protected $_id;
-    protected $_title;
-    protected $_description;
+    protected $_title;   
     
-    
+    /**
+     *
+     * Конструктор
+     * @param array $options Параметры для создания объекта
+     */
     public function __construct(array $options = null)
     {        
         if (is_array($options))
@@ -59,18 +62,7 @@ class Application_Model_Hotel
     public function getTitle()
     {
         return $this->_title;
-    }
-    
-    public function setDescription($description)
-    {
-        $this->_description = $description;
-        return $this;
-    }
- 
-    public function getDescription()
-    {
-        return $this->_description;
-    }
+    }      
     
     public function setId($id)
     {

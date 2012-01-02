@@ -6,7 +6,7 @@ abstract class Application_Model_MapperAbstract
     protected $_dbTable;
     
     /**
-     * Сделал Марат Фахреев
+     * Устанавливает таблицу
      * @param string $dbTable Имя Модели 
      * @return Application_Model_MapperAbstract 
      */

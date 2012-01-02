@@ -11,14 +11,16 @@ class Application_Model_HotelMapper extends Application_Model_MapperAbstract
     public function save(Application_Model_Hotel $hotel)
     {
         $data = array(
-            'title'   => $hotel->getTitle(),
-            'description' => $hotel->getDescription(),            
+            'title'   => $hotel->getTitle(),                    
         );
  
-        if (null === ($id = $hotel->getId())) {
+        if (null === ($id = $hotel->getId()))
+        {
             unset($data['id']);
             $this->getDbTable()->insert($data);
-        } else {
+        }
+        else
+        {
             $this->getDbTable()->update($data, array('id = ?' => $id));
         }
     }
@@ -27,9 +29,11 @@ class Application_Model_HotelMapper extends Application_Model_MapperAbstract
      *
      * @return Array_Application_Model_Hotel массив заполненных Application_Model_Hotel
      */
-    /*public function findAll() {
+    /*
+    public function findAll() {
         return parent::findAll();
-    }*/
+    }
+    */
     
     
     /**
@@ -37,9 +41,11 @@ class Application_Model_HotelMapper extends Application_Model_MapperAbstract
      * @param int $id идентификатор записи
      * @return Application_Model_Hotel 
      */
+    /*
     public function find($id) {
         return parent::find($id);
     }
+    */
     
 }
 
