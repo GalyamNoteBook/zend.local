@@ -1,0 +1,15 @@
+<script >
+    $(document).ready(function() {
+   // put all your jQuery goodness in here.
+   alert('syy');
+ });
+</script>
+Страничка отелей<br>
+<div class='ll'>Начало</div
+<dl>
+    <?php foreach ($this->entries as $entry): ?>
+        <dt><?php echo $this->escape($entry->title) ?></dt>
+        <dt><?php echo $this->escape($entry->description) ?></dt>
+    <?php endforeach ?>
+</dl>
+Конец

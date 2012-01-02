@@ -1,0 +1,14 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Zend Framework Quickstart Application</title>
+  <?php echo $this->headLink()->appendStylesheet($this->baseUrl().'/css/global.css'); ?> 
+  <script type="text/javascript" src="<?php echo $this->baseUrl().'/js/jquery.js'; ?>"></script>
+</head>
+<body>
+Начало содержимого
+<?php echo $this->layout()->content ?>
+Конец содержимого
+</body>
+</html>
